@@ -20,7 +20,7 @@ The goal is to understand how these components work together in a simple obstacl
 | **Display** | 16×2 LCD (shows position)             |
 | **Power**   | 5V logic and separate motor supply    |
 
----
+
 
 ### Ultrasonic Distance Measurement (Timer + Interrupts)
 
@@ -55,7 +55,7 @@ while the main loop continues controlling motors and updating the display.
 
 This enables precise, non-blocking distance measurement in real time.
 
----
+
 
 ### Motor Control
 
