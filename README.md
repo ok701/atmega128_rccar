@@ -2,7 +2,7 @@
 
 **Project Date:** June 2021
 
-![RC Car Overview](assets/rc_car.jpg)
+![RC Car Overview](assets/rc_car.png)
 
 This project demonstrates the basic operation of a microcontroller using an **ATmega128**.
 Instead of using Arduino libraries, it directly controls the hardware by setting registers, timers, and interrupts.
