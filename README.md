@@ -8,7 +8,6 @@ This project demonstrates the basic operation of a microcontroller using an **AT
 Instead of using Arduino libraries, it directly controls the hardware by setting registers, timers, and interrupts.
 The goal is to understand how these components work together in a simple obstacle-avoiding RC car.
 
----
 
 ## Hardware Setup
 
@@ -22,12 +21,12 @@ The goal is to understand how these components work together in a simple obstacl
 
 
 
-### Ultrasonic Distance Measurement (Timer + Interrupts)
+## Ultrasonic Distance Measurement (Timer + Interrupts)
 
 Each ultrasonic sensor sends a short **10 µs trigger pulse** and waits for the **Echo signal** to return.
 The MCU measures how long the Echo pin stays **HIGH**, which represents the **round-trip time** of the sound wave.
 
-#### Timer Configuration
+### Timer Configuration
 
 * **System clock:** 16 MHz
 * **Prescaler:** 8 → each timer tick = 0.5 µs
@@ -42,7 +41,7 @@ Since sound travels about **340 m/s**, the distance in centimeters is:
 
 Each overflow roughly represents **1 cm** of distance.
 
-#### Interrupt Operation
+### Interrupt Operation
 
 Interrupts handle all time-critical tasks, allowing the MCU to measure distance
 while the main loop continues controlling motors and updating the display.
@@ -57,7 +56,7 @@ This enables precise, non-blocking distance measurement in real time.
 
 
 
-### Motor Control
+## Motor Control
 
 Motors are controlled through **PORTF** and **PORTB**.
 Each output bit sets the rotation direction via a motor driver circuit.
